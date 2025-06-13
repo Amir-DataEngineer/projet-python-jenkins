@@ -5,14 +5,14 @@ pipeline {
         stage('Installer les dépendances') {
             steps {
                 echo 'Installation des dépendances...'
-                bat 'python -m pip install -r requirements.txt'
+                bat '"C:\\Users\\Admin\\AppData\\Local\\Programs\\Python\\Python313\\python.exe" -m pip install -r requirements.txt'
             }
         }
 
         stage('Exécuter le script Python') {
             steps {
                 echo 'Exécution du script scraper.py...'
-                bat 'python scraper.py'
+                bat '"C:\\Users\\Admin\\AppData\\Local\\Programs\\Python\\Python313\\python.exe" scraper.py'
             }
         }
 
