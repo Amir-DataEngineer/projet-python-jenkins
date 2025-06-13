@@ -5,14 +5,14 @@ pipeline {
         stage('Installer les dépendances') {
             steps {
                 echo 'Installation des dépendances...'
-                sh 'pip install -r requirements.txt'
+                bat 'pip install -r requirements.txt'
             }
         }
 
         stage('Exécuter le script Python') {
             steps {
                 echo 'Exécution du script scraper.py...'
-                sh 'python scraper.py'
+                bat 'python scraper.py'
             }
         }
 
